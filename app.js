@@ -33,6 +33,8 @@ const getImages = (query) => {
     .then(response => response.json())
     .then(data => showImages(data.hits))
     .catch(err => console.log(err))
+    
+    
 }
 
 let slideIndex = 0;
@@ -128,22 +130,13 @@ const changeSlide = (index) => {
   
   }
  
-
 sliderBtn.addEventListener('click', function () {
   createSlider()
 })
 
-
-// document.getElementById('search').addEventListener('keypress', function search(event) {
-//   // console.log(event.key)
-//   if(event.key==='Enter') {
-//     // console.log('it is working')
-//     btnHandler()
-//     }
   
 document.getElementById('search').addEventListener('keypress', function search(event){
   if(event.key==='Enter'){
     btnHandler()
   }
 })
-
